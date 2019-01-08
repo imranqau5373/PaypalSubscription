@@ -17,10 +17,11 @@ var billingPlanAttributes = {
     "description": "Create Plan for Regular",
     "merchant_preferences": {
         "auto_bill_amount": "yes",
-        "cancel_url": "http://https://paypalsub.herokuapp.com/cancel",
+        "cancel_url": "https://paypalsub.herokuapp.com/cancel",
         "initial_fail_amount_action": "continue",
         "max_fail_attempts": "1",
-        "return_url": "http://https://paypalsub.herokuapp.com/success",
+        "return_url": "https://paypalsub.herokuapp.com/success",
+        //"return_url": "http://localhost:3000/success",
         "setup_fee": {
             "currency": "USD",
             "value": "0.01"
