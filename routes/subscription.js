@@ -4,7 +4,7 @@ var paypal = require('paypal-rest-sdk');
 
 
 paypal.configure({
-  'mode': 'sandbox', //sandbox or live
+  'mode': 'live', //sandbox or live
   'client_id': 'AQ17GTRwK7LOF1-fnSe4wlQazhzXUskdNFY1zrzVhOAvBcePk6gUAfQgPpkxEiWzzZnNyeXEaWvEB_MK',
   'client_secret': 'EJHg5_bbMiw2PFnoP75StnrPRn_Unqq5MHgrzRU8xPSHedssKGrzyYcogmI1oVwjj4wP_VeD8Kjjf--G'
 });
