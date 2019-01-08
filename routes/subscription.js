@@ -5,8 +5,8 @@ var paypal = require('paypal-rest-sdk');
 
 paypal.configure({
   'mode': 'sandbox', //sandbox or live
-  'client_id': 'AXxtAiKMnbQAmDO6FrgO48UJ0oCGbqdI_bsHpfqHSJXSrTaVpPMjnJwQMuWeBCC4dzOlrHg5IFCNCL3k',
-  'client_secret': 'EBmFQoh3gJcIxDjxAO6tQdWtDiraxNWFWjPEXGBfkE8Ht9WAlkq-RkGcPVt2wKyuFIUO4gVnuZQYyvFS'
+  'client_id': 'AQ17GTRwK7LOF1-fnSe4wlQazhzXUskdNFY1zrzVhOAvBcePk6gUAfQgPpkxEiWzzZnNyeXEaWvEB_MK',
+  'client_secret': 'EJHg5_bbMiw2PFnoP75StnrPRn_Unqq5MHgrzRU8xPSHedssKGrzyYcogmI1oVwjj4wP_VeD8Kjjf--G'
 });
 
 var isoDate = new Date('2019/01/20');
