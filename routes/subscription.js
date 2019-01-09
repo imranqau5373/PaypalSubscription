@@ -9,8 +9,8 @@ paypal.configure({
   'client_secret': 'EBmFQoh3gJcIxDjxAO6tQdWtDiraxNWFWjPEXGBfkE8Ht9WAlkq-RkGcPVt2wKyuFIUO4gVnuZQYyvFS'
 });
 
-var isoDate = new Date('2019/01/20');
-isoDate.setSeconds(isoDate.getSeconds() + 4);
+var isoDate = new Date();
+isoDate.setMonth(isoDate.getMonth() + 1);
 isoDate.toISOString().slice(0, 19) + 'Z';
 
 var billingPlanAttributes = {
@@ -20,11 +20,11 @@ var billingPlanAttributes = {
         "cancel_url": "https://paypalsub.herokuapp.com/cancel",
         "initial_fail_amount_action": "continue",
         "max_fail_attempts": "1",
-        "return_url": "https://paypalsub.herokuapp.com/success",
-        //"return_url": "http://localhost:3000/success",
+        //"return_url": "https://paypalsub.herokuapp.com/success",
+        "return_url": "http://localhost:3000/success",
         "setup_fee": {
             "currency": "USD",
-            "value": "0.01"
+            "value": "10"
         }
     },
     "name": "Testing1-Regular1",
@@ -32,56 +32,14 @@ var billingPlanAttributes = {
         {
             "amount": {
                 "currency": "USD",
-                "value": "100"
+                "value": "10"
             },
-            "charge_models": [
-                {
-                    "amount": {
-                        "currency": "USD",
-                        "value": "10.60"
-                    },
-                    "type": "SHIPPING"
-                },
-                {
-                    "amount": {
-                        "currency": "USD",
-                        "value": "20"
-                    },
-                    "type": "TAX"
-                }
-            ],
+            "charge_models": [],
             "cycles": "0",
             "frequency": "MONTH",
             "frequency_interval": "1",
             "name": "Regular 1",
             "type": "REGULAR"
-        },
-        {
-            "amount": {
-                "currency": "USD",
-                "value": "20"
-            },
-            "charge_models": [
-                {
-                    "amount": {
-                        "currency": "USD",
-                        "value": "10.60"
-                    },
-                    "type": "SHIPPING"
-                },
-                {
-                    "amount": {
-                        "currency": "USD",
-                        "value": "20"
-                    },
-                    "type": "TAX"
-                }
-            ],
-            "cycles": "4",
-            "frequency": "MONTH",
-            "frequency_interval": "1",
-            "name": "Trial 1",
-            "type": "TRIAL"
         }
     ],
     "type": "INFINITE"
