@@ -3,8 +3,10 @@ var router = express.Router();
 var paypalObj = require('../config/settings');
 
 
+
+
 router.get('/',function(req,res){
-    var billingAgreementId = req.query.billId;//"I-08413VDRU6DE";
+    var billingAgreementId = 'I-8LGYEW442HM7';//req.query.billId;//=="I-08413VDRU6DE";
     console.log(billingAgreementId)
 
 var cancel_note = {
@@ -25,6 +27,7 @@ var cancel_note = {
                     throw error;
                 } else {
                     console.log(billingAgreement.state);
+                    res.json(billingAgreement.state);
                 }
             });
         }
