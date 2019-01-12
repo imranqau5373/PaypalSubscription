@@ -18,7 +18,7 @@ var billingPlanAttributes = {
     "merchant_preferences": {
         "auto_bill_amount": "yes",
         //"cancel_url": "http://localhost:3000/cancelSub",
-        "cancel_url": "https://paypalsub.herokuapp.com/cancelSub/billId",
+        "cancel_url": "https://paypalsub.herokuapp.com/cancelSub",
         "initial_fail_amount_action": "continue",
         "max_fail_attempts": "1",
         "return_url": "https://paypalsub.herokuapp.com/success",
